@@ -21,14 +21,27 @@ module Prelaunch
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    # config.action_mailer.delivery_method = :smtp
+    # config.action_mailer.smtp_settings = {
+    #      address:              'smtp.zoho.com',
+    #      port:                 465,
+    #      domain:               'machinescantalk.com',
+    #      user_name:            'human@machinescantalk.com',
+    #      password:             'peelo5141',
+    #      authentication:       :login,
+    #      ssl:                  true,
+    #      tls:                  true,
+    #      enable_starttls_auto: true
+    #  }
+    
     config.action_mailer.delivery_method = :smtp
     config.action_mailer.smtp_settings = {
-         address:              'smtp.zoho.com',
+         address:              'smtp.mailgun.org',
          port:                 465,
          domain:               'machinescantalk.com',
-         user_name:            'human@machinescantalk.com',
-         password:             'peelo5141',
-         authentication:       :login,
+         user_name:            'postmaster@machinescantalk.com',
+         password:             '9790529e2eb3c1b87199f619174af4f9',
+         authentication:       :plain,
          ssl:                  true,
          tls:                  true,
          enable_starttls_auto: true
